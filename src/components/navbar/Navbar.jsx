@@ -1,5 +1,19 @@
 import React from "react"
-import { Box, Button, Grid, MenuItem, Stack, Table, TableCell, TableContainer, TableHead, TableRow, TextField } from "@mui/material"
+import {
+  Box,
+  Button,
+  Grid,
+  MenuItem,
+  Paper,
+  Stack,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  TextField,
+} from "@mui/material"
 import { Search } from "@mui/icons-material"
 
 function Transfers() {
@@ -83,12 +97,20 @@ function Transfers() {
           </Grid>
         </Grid>
 
-        <TableContainer>
-          <Table>
+        <p style={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+          Saldo Total: R$50,00 &nbsp;&nbsp;&nbsp;&nbsp; Saldo no período: R$50,00
+        </p>
+        <TableContainer component={Paper}>
+          <Table aria-label='customized table'>
             <TableHead>
               <TableRow>
+                <TableCell style={{ textAlign: 'center' }} >DADOS</TableCell>
+                <TableCell style={{ textAlign: 'center' }} >VALENCIA</TableCell>
+                <TableCell style={{ textAlign: 'center' }} >TIPO</TableCell>
+                <TableCell style={{ textAlign: 'center' }} >NOME DO OPERADOR</TableCell>
               </TableRow>
             </TableHead>
+            <TableBody></TableBody>
           </Table>
         </TableContainer>
       </Box>
